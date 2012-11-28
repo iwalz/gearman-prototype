@@ -6,7 +6,6 @@ php:
 before_install:
   - pecl -q install gearman && echo "extension=gearman.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
   - phpenv rehash
-  - php server.php &
 
 script:
   - cd tests/
