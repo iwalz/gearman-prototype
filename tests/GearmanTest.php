@@ -14,7 +14,7 @@ class GearmanTest extends PHPUnit_Framework_TestCase
         if($ret) {
             echo "Connected" .  PHP_EOL;
         }
-        $val = $client->do("reverse", "Hello World!");
+        $val = $client->doNormal("reverse", "Hello World!");
         $this->assertEquals("!dlroW olleH", $val);
     }
 }
