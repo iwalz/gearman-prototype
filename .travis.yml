@@ -4,7 +4,7 @@ php:
   - "5.4"
 
 before_install:
-  - sudo pecl -q install gearman 
+  - printf "\n" | sudo pecl -q install gearman 
   - echo "extension=gearman.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - phpenv rehash
   - php server.php &
