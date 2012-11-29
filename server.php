@@ -1,6 +1,9 @@
 <?php
 $worker= new GearmanWorker();
-$worker->addServer('localhost');
+$ret = $worker->addServer('127.0.0.1', 4730);
+if($ret) {
+    echo "Connected" .  PHP_EOL;
+}
 $worker->addFunction("reverse", "my_reverse_function");
 while ($worker->work());
 
