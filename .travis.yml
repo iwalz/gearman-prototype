@@ -5,7 +5,7 @@ php:
 
 before_install:
   - sudo apt-get install gearman-job-server libgearman-dev gearman
-  - gearmand -d
+  - sudo /etc/init.d/gearman-job-server status
   - /bin/bash ./installer.sh
   - phpenv rehash
   - php server.php &
