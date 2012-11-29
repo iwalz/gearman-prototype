@@ -5,8 +5,7 @@ php:
 
 before_install:
   - sudo apt-get install gearman-job-server gearman-tools
-  - gearmand -V
-  - gearmand &
+  - gearmand -d
   - sudo apt-get install libgearman-dev
   - /bin/bash ./installer.sh
   - phpenv rehash
